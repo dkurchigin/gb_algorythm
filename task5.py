@@ -17,10 +17,10 @@ if delta == 0:
     delta = 0
 else:
     if delta < 0:
-        delta = abs(delta + 1) 
+        delta = abs(delta + 1)
     else:
         delta = abs(delta - 1)
-    
+
 print(f"Позиция буквы {chr(first_letter + LETTER_SHIFT)} - {first_letter}, позиция буквы "
       f"{chr(second_letter + LETTER_SHIFT)} - {second_letter}")
 print(f"Между буквами находится {delta} букв")
