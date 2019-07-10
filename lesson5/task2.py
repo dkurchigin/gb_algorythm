@@ -19,9 +19,9 @@ def format_numbers(first, second):
     if len(first) < len(second):
         first, second = second, first
 
-    for _ in range(len(first)):
+    for digit in range(len(first)):
         try:
-            second[_]
+            second[digit]
         except IndexError:
             second.append(False)
 
@@ -69,7 +69,6 @@ dict_numbers = {'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15}
 
 first_number = input('Введите первое число')
 second_number = input('Введите второе число')
-result_ = deque()
 
 first_number, second_number = format_numbers(first_number, second_number)
 result_ = sum_hex(first_number, second_number)

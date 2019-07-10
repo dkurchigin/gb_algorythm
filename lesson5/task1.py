@@ -19,8 +19,8 @@ for enterprise_index in range(enterprise_number):
     enterprise_stats[enterprise_name] /= QUARTER
 
 average_profit = 0
-for _ in enterprise_stats.values():
-    average_profit += _
+for profit in enterprise_stats.values():
+    average_profit += profit
 average_profit /= len(enterprise_stats)
 
 print(f'Средняя прибыль за год для всех предприятий равна {round(average_profit, 3)}')
@@ -30,5 +30,5 @@ for enterprise, year_profit in enterprise_stats.items():
         print(f'Предприятие {enterprise} имеет прибыль {year_profit}. Прибыль ниже средней')
 
 for enterprise, year_profit in enterprise_stats.items():
-    if year_profit >= average_profit:
+    if year_profit > average_profit:
         print(f'Предприятие {enterprise} имеет прибыль {year_profit}. Прибыль выше средней')
